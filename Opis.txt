@@ -1,0 +1,6 @@
+Aplikacja tworzona w ramach kursu "Lynda Building Applications with Angular ASP NET Core and Entity Framework Core".
+Zastosowane technologie:
+Angular 5.0
+.Net 2.0
+Entity Framework
+Identity Framework
