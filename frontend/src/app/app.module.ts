@@ -10,6 +10,7 @@ import {
   MatToolbarModule
 } from '@angular/material';
 import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { QuestionComponent } from './question.component'
@@ -18,12 +19,14 @@ import { QuestionsComponent } from './questions.component'
 import { HomeComponent } from './home.component';
 import {NavComponent} from './nav.component';
 import {QuizComponent} from './quiz.component'
+import {QuizzesComponent} from './quizzes.component'
 
 const routes = [
   { path: '', component: HomeComponent },
   { path: 'question', component: QuestionComponent },
   { path: 'questions', component: QuestionsComponent },
-  { path: 'quiz', component: QuizComponent }
+  { path: 'quiz', component: QuizComponent },
+  { path: 'quizzes', component: QuizzesComponent }
 ]
 
 @NgModule({
@@ -33,7 +36,8 @@ const routes = [
     QuestionsComponent, 
     HomeComponent,
     NavComponent,
-    QuizComponent
+    QuizComponent,
+    QuizzesComponent
   ],
   imports: [
     BrowserModule,
