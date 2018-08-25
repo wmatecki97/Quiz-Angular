@@ -22,6 +22,18 @@ export class ApiService{
         })
     }
 
+    putQuestion(question){
+        this.http.put(`http://localhost:54202/api/Questions/${question.id}`,question).subscribe(res => {
+            console.log(res)
+        })
+    }
+
+    postQuiz(quiz){
+        this.http.post('http://localhost:54202/api/Quizzes',quiz).subscribe(res => {
+            console.log(res)
+        })
+    }
+
     selectQuestion(question){
         this.selectedQuestion.next(question); 
     }
