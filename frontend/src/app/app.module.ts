@@ -24,9 +24,9 @@ import {QuizzesComponent} from './quizzes.component'
 const routes = [
   { path: '', component: HomeComponent },
   { path: 'question', component: QuestionComponent },
+  { path: 'question/:quizId', component: QuestionComponent },
   { path: 'questions', component: QuestionsComponent },
-  { path: 'quiz', component: QuizComponent },
-  { path: 'quizzes', component: QuizzesComponent }
+  { path: 'quiz', component: QuizComponent }
 ]
 
 @NgModule({

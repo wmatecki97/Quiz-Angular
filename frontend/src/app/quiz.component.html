@@ -8,11 +8,12 @@
         <mat-form-field class="fullWidth">
             <input [(ngModel)]="quiz.title" name="title" matInput placeholder="Quiz Title">
         </mat-form-field>
-    </form>
+    </form> 
 </mat-card-content>
 <mat-card-actions>
         <button *ngIf="quiz.id" (click)="api.putQuiz(quiz)" mat-button>EDIT</button>
         <button *ngIf="quiz.id" (click)="quiz = {}" mat-button>NEW</button>
+        <button *ngIf="quiz.id" [routerLink]="['/question', quiz.id]" mat-button>EDIT QUESTIONS</button>
         <button *ngIf="!quiz.id" (click)="api.postQuiz(quiz)" mat-button>POST</button>
       </mat-card-actions>
 </mat-card>
