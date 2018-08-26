@@ -18,6 +18,13 @@ export class ApiService{
     
     }
 
+    getQuizzes(){
+        return this.http.get('http://localhost:54202/api/Quizzes')     
+     }
+     
+    getAllQuizzes(){
+        return this.http.get('http://localhost:54202/api/Quizzes/all')     
+     }
     postQuestion(question){
         this.http.post('http://localhost:54202/api/Questions',question).subscribe(res => {
             console.log(res)
@@ -46,9 +53,7 @@ export class ApiService{
         })
     }
 
-    getQuizzes(){
-        return this.http.get('http://localhost:54202/api/Quizzes')     
-     }
+    
 
      selectQuiz(quiz){
         this.selectedQuiz.next(quiz); 
